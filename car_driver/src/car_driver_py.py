@@ -24,13 +24,10 @@ class Regions():
 
 		angle = data.ranges.index(min(arr))
 
-		if(angle <= 89):
+		if(angle <= 89): 
 			radian = -(angle*(math.pi/180))
 		else:
 			radian = (359-angle)*(math.pi/180)
-
-#		print(radian)
-#		print(min(arr))
 
 		if((arr[2] < 0.5) and self.boolean == True): #front
 			self.ack_msg.drive.speed = 0
@@ -67,7 +64,7 @@ class Regions():
 			self.ack_msg.drive.steering_angle = 0
 			self.timeArr = []
 			print("left")
-		else:
+		else: # Straight
 			self.ack_msg.drive.speed = 0.7
 			self.ack_msg.drive.steering_angle = 0
 			self.timeArr = []
