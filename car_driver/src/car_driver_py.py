@@ -75,7 +75,7 @@ class Regions():
 
 if __name__ == "__main__":
 	try:
-		rospy.init_node('car_driver_py')
+		rospy.init_node('car_driver_py') # ROS 노드 생성
 		regions = Regions()
 		while not rospy.is_shutdown():
 			regions.pub_driver()
